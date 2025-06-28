@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Projects - Your Portfolio</title>
+  <title>All Projects - Parv Agarwal Portfolio</title>
   <link rel="stylesheet" href="/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -11,7 +11,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container">
-      <div class="logo">Portfolio</div>
+      <div class="logo">Parv</div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#skills">Skills</a></li>
@@ -36,8 +36,8 @@
   <section id="projects" class="projects all-projects">
     <div class="container">
       <div class="projects-grid">
-        <!-- Original Projects -->
-        <div class="project-card">
+        <!-- Featured Projects -->
+        <div class="project-card" data-project="ai-analytics">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Project">
           </div>
@@ -49,9 +49,12 @@
               <span>TensorFlow</span>
               <span>Data Science</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-project="cloud-migration">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Project">
           </div>
@@ -63,9 +66,12 @@
               <span>Docker</span>
               <span>Terraform</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-project="devops-pipeline">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80" alt="DevOps Project">
           </div>
@@ -77,24 +83,13 @@
               <span>Kubernetes</span>
               <span>GitOps</span>
             </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80" alt="ML Project">
-          </div>
-          <div class="project-content">
-            <h3>Computer Vision System</h3>
-            <p>Built an advanced computer vision system for real-time object detection</p>
-            <div class="tags">
-              <span>OpenCV</span>
-              <span>PyTorch</span>
-              <span>YOLO</span>
+            <div class="project-cta">
+              Click to learn more →
             </div>
           </div>
         </div>
         <!-- Additional Projects -->
-        <div class="project-card">
+        <div class="project-card" data-project="security-analysis">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Project">
           </div>
@@ -106,9 +101,12 @@
               <span>Security</span>
               <span>ML</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-project="big-data">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Project">
           </div>
@@ -120,9 +118,12 @@
               <span>Hadoop</span>
               <span>Python</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-project="iot-monitoring">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="IoT Project">
           </div>
@@ -134,9 +135,12 @@
               <span>AWS IoT</span>
               <span>Node.js</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-project="blockchain-supply">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&w=800&q=80" alt="Blockchain Project">
           </div>
@@ -148,11 +152,64 @@
               <span>Solidity</span>
               <span>Web3</span>
             </div>
+            <div class="project-cta">
+              Click to learn more →
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <button class="modal-close" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="" class="modal-project-image">
+        <div class="modal-grid">
+          <div class="modal-main">
+            <h3>Project Overview</h3>
+            <p id="modal-description"></p>
+            
+            <h3>Key Achievements</h3>
+            <ul id="modal-achievements"></ul>
+            
+            <h3>Technologies Used</h3>
+            <div id="modal-technologies" class="modal-tech-tags"></div>
+          </div>
+          <div class="modal-sidebar">
+            <div class="modal-details">
+              <h4><i data-lucide="calendar"></i> Project Details</h4>
+              <div class="detail-item">
+                <span class="detail-label">Duration:</span>
+                <span id="modal-duration"></span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Team Size:</span>
+                <span id="modal-team"></span>
+              </div>
+            </div>
+            <div class="modal-links">
+              <a id="modal-demo" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary">
+                <i data-lucide="external-link"></i>
+                View Live Demo
+              </a>
+              <a id="modal-github" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-secondary">
+                <i data-lucide="github"></i>
+                View Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="/main.js"></script>
 </body>
