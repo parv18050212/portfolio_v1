@@ -15,6 +15,8 @@
   --gray: #6b7280;
   --gray-700: #374151;
   --gray-800: #1f2937;
+  --resume: #10b981;
+  --resume-dark: #059669;
 }
 
 /* Base Styles */
@@ -81,6 +83,7 @@ h2 {
   display: flex;
   gap: 2rem;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -92,6 +95,28 @@ h2 {
 
 .nav-links a:hover {
   color: var(--primary);
+}
+
+.resume-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--resume) !important;
+  color: white !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.resume-link:hover {
+  background: var(--resume-dark) !important;
+  color: white !important;
+}
+
+.resume-link i {
+  width: 1rem;
+  height: 1rem;
 }
 
 .mobile-menu {
@@ -211,11 +236,15 @@ h2 {
 @media (min-width: 640px) {
   .cta-buttons {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -244,6 +273,20 @@ h2 {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-resume {
+  background: var(--resume);
+  color: white;
+}
+
+.btn-resume:hover {
+  background: var(--resume-dark);
+}
+
+.btn-resume i {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* Skills Section */
@@ -341,6 +384,21 @@ h2 {
   .projects {
     padding: 5rem 0;
   }
+}
+
+.projects-header {
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.projects-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.projects-header p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--gray);
 }
 
 .projects-grid {
@@ -481,6 +539,7 @@ h2 {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .social-links a {
@@ -488,6 +547,9 @@ h2 {
   transition: color 0.3s, background-color 0.3s;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .social-links a:hover {
@@ -498,6 +560,27 @@ h2 {
 .social-links i {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.resume-download {
+  background: var(--resume) !important;
+  color: white !important;
+  font-weight: 500;
+}
+
+.resume-download:hover {
+  background: var(--resume-dark) !important;
+  color: white !important;
+}
+
+.resume-download span {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .resume-download span {
+    display: none;
+  }
 }
 
 .contact-content p {
@@ -797,6 +880,17 @@ h2 {
 
   .nav-links li {
     padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .resume-link {
+    justify-content: center !important;
   }
 
   .mobile-menu {

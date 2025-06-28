@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, Cloud, Database, Code, Server, Brain, X, ExternalLink, Calendar, Users, Award } from 'lucide-react';
+import { Github, Linkedin, Mail, Cloud, Database, Code, Server, Brain, X, ExternalLink, Calendar, Users, Award, Download } from 'lucide-react';
 
 interface Project {
   id: string;
@@ -88,8 +88,29 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-sm z-50 py-4">
+        <div className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
+          <div className="text-xl font-bold text-blue-400">Parv</div>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="hover:text-blue-400 transition-colors">Home</a>
+            <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
+            <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
+            <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
+            <a 
+              href="/resume.pdf" 
+              download="Parv_Agarwal_Resume.pdf"
+              className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              <Download className="w-4 h-4" />
+              Resume
+            </a>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <header className="container mx-auto px-4 sm:px-6 py-16 md:py-32">
+      <header className="container mx-auto px-4 sm:px-6 py-16 md:py-32" id="home">
         <div className="max-w-4xl">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Hi, I'm <span className="text-blue-400">Parv Agarwal</span>
@@ -103,6 +124,14 @@ function App() {
             </a>
             <a href="#projects" className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-semibold transition-colors text-center">
               View Projects
+            </a>
+            <a 
+              href="/resume.pdf" 
+              download="Parv_Agarwal_Resume.pdf"
+              className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg font-semibold transition-colors"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
             </a>
           </div>
         </div>
@@ -158,10 +187,18 @@ function App() {
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 md:mb-12 text-center">Get In Touch</h2>
           <div className="max-w-2xl mx-auto flex flex-col items-center">
-            <div className="flex space-x-6 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               <SocialLink href="https://github.com" icon={<Github className="w-6 h-6" />} />
               <SocialLink href="https://linkedin.com" icon={<Linkedin className="w-6 h-6" />} />
               <SocialLink href="mailto:parvagarwal73@gmail.com" icon={<Mail className="w-6 h-6" />} />
+              <a 
+                href="/resume.pdf" 
+                download="Parv_Agarwal_Resume.pdf"
+                className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-4 py-2 rounded-lg transition-colors font-medium"
+              >
+                <Download className="w-5 h-5" />
+                <span className="hidden sm:inline">Resume</span>
+              </a>
             </div>
             <p className="text-gray-300 text-center text-sm sm:text-base leading-relaxed">
               I'm always open to discussing new projects, opportunities, and collaborations.
