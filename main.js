@@ -44,6 +44,66 @@ const projectData = {
     demoUrl: 'https://pipeline-demo.example.com',
     githubUrl: 'https://github.com/example/devops-pipeline',
     image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80'
+  },
+  'security-analysis': {
+    title: 'Security Analysis Tool',
+    description: 'Created a comprehensive security analysis platform that automatically scans codebases and infrastructure for vulnerabilities. The tool integrates with CI/CD pipelines and provides detailed reports with remediation suggestions.',
+    achievements: [
+      'Detected 95% of known vulnerabilities',
+      'Reduced security review time by 70%',
+      'Integrated with 50+ development teams'
+    ],
+    technologies: ['Python', 'OWASP', 'Docker', 'PostgreSQL', 'React', 'Node.js', 'AWS'],
+    duration: '5 months',
+    teamSize: '3 security engineers',
+    demoUrl: 'https://security-demo.example.com',
+    githubUrl: 'https://github.com/example/security-analysis',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'
+  },
+  'big-data': {
+    title: 'Big Data Analytics Platform',
+    description: 'Developed a high-performance big data analytics platform capable of processing petabytes of data in real-time. The system uses Apache Spark for distributed computing and provides interactive dashboards for data visualization.',
+    achievements: [
+      'Processes 10TB+ data daily',
+      'Reduced query time by 85%',
+      'Supports 1000+ concurrent users'
+    ],
+    technologies: ['Apache Spark', 'Hadoop', 'Kafka', 'Python', 'Scala', 'Elasticsearch', 'Kibana'],
+    duration: '10 months',
+    teamSize: '8 data engineers',
+    demoUrl: 'https://bigdata-demo.example.com',
+    githubUrl: 'https://github.com/example/big-data',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
+  },
+  'iot-monitoring': {
+    title: 'IoT Monitoring System',
+    description: 'Built an end-to-end IoT monitoring solution that collects data from thousands of sensors, processes it in real-time, and provides actionable insights through a web dashboard. The system includes predictive maintenance capabilities.',
+    achievements: [
+      'Monitors 5000+ IoT devices',
+      'Achieved 99.8% uptime',
+      'Reduced maintenance costs by 30%'
+    ],
+    technologies: ['AWS IoT Core', 'Node.js', 'MongoDB', 'React', 'MQTT', 'Lambda', 'DynamoDB'],
+    duration: '7 months',
+    teamSize: '5 IoT engineers',
+    demoUrl: 'https://iot-demo.example.com',
+    githubUrl: 'https://github.com/example/iot-monitoring',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80'
+  },
+  'blockchain-supply': {
+    title: 'Blockchain Supply Chain',
+    description: 'Developed a transparent and immutable supply chain tracking system using blockchain technology. The platform enables end-to-end traceability of products from manufacturing to delivery, ensuring authenticity and reducing fraud.',
+    achievements: [
+      'Tracked 100,000+ products',
+      'Reduced fraud by 90%',
+      'Improved transparency by 100%'
+    ],
+    technologies: ['Ethereum', 'Solidity', 'Web3.js', 'React', 'Node.js', 'IPFS', 'MetaMask'],
+    duration: '6 months',
+    teamSize: '4 blockchain developers',
+    demoUrl: 'https://blockchain-demo.example.com',
+    githubUrl: 'https://github.com/example/blockchain-supply',
+    image: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&w=800&q=80'
   }
 };
 
@@ -63,6 +123,44 @@ navLinks.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {
     navLinks.classList.remove('active');
   }
+});
+
+// View More Projects functionality
+const viewMoreBtn = document.getElementById('view-more-btn');
+const showLessBtn = document.getElementById('show-less-btn');
+const additionalProjects = document.querySelectorAll('.additional-project');
+const projectsTitle = document.getElementById('projects-title');
+
+viewMoreBtn.addEventListener('click', () => {
+  // Show additional projects
+  additionalProjects.forEach(project => {
+    project.style.display = 'block';
+  });
+  
+  // Update title and buttons
+  projectsTitle.textContent = 'All Projects';
+  viewMoreBtn.style.display = 'none';
+  showLessBtn.style.display = 'inline-flex';
+  
+  // Re-initialize Lucide icons for new content
+  lucide.createIcons();
+});
+
+showLessBtn.addEventListener('click', () => {
+  // Hide additional projects
+  additionalProjects.forEach(project => {
+    project.style.display = 'none';
+  });
+  
+  // Update title and buttons
+  projectsTitle.textContent = 'Featured Projects';
+  viewMoreBtn.style.display = 'inline-flex';
+  showLessBtn.style.display = 'none';
+  
+  // Scroll back to projects section
+  document.getElementById('projects').scrollIntoView({
+    behavior: 'smooth'
+  });
 });
 
 // Smooth scroll for navigation links

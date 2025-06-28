@@ -516,6 +516,18 @@ h2 {
   margin-top: 1rem;
 }
 
+/* Projects Toggle Button */
+.projects-toggle {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.projects-toggle .btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 /* Contact Section */
 .contact {
   padding: 4rem 0;
