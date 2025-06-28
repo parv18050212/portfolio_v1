@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Parv</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-menu" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="glitch" data-text="Hi, I'm Your Name">Hi, I'm Parv Agarwal</h1>
+        <p class="subtitle">Computer Science Engineer specializing in AI/ML, Cloud Computing, and DevOps</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i data-lucide="brain" class="skill-icon"></i>
+          <h3>AI/ML</h3>
+          <p>Deep Learning, Neural Networks, Machine Learning Algorithms</p>
+        </div>
+        <div class="skill-card">
+          <i data-lucide="cloud" class="skill-icon"></i>
+          <h3>Cloud Computing</h3>
+          <p>AWS, Azure, Cloud Architecture, Serverless</p>
+        </div>
+        <div class="skill-card">
+          <i data-lucide="server" class="skill-icon"></i>
+          <h3>DevOps</h3>
+          <p>CI/CD, Docker, Kubernetes, Infrastructure as Code</p>
+        </div>
+        <div class="skill-card">
+          <i data-lucide="code" class="skill-icon"></i>
+          <h3>Programming</h3>
+          <p>Python</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Project">
+          </div>
+          <div class="project-content">
+            <h3>AI-Powered Analytics</h3>
+            <p>Developed a machine learning model for predictive analytics using Python and TensorFlow</p>
+            <div class="tags">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>Data Science</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Project">
+          </div>
+          <div class="project-content">
+            <h3>Cloud Migration Project</h3>
+            <p>Led the migration of legacy systems to AWS cloud infrastructure</p>
+            <div class="tags">
+              <span>AWS</span>
+              <span>Docker</span>
+              <span>Terraform</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80" alt="DevOps Project">
+          </div>
+          <div class="project-content">
+            <h3>DevOps Pipeline</h3>
+            <p>Implemented automated CI/CD pipeline using Jenkins and Kubernetes</p>
+            <div class="tags">
+              <span>Jenkins</span>
+              <span>Kubernetes</span>
+              <span>GitOps</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80" alt="ML Project">
+          </div>
+          <div class="project-content">
+            <h3>Computer Vision System</h3>
+            <p>Built an advanced computer vision system for real-time object detection</p>
+            <div class="tags">
+              <span>OpenCV</span>
+              <span>PyTorch</span>
+              <span>YOLO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-more-container">
+        <a href="/projects.html" class="btn btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-content">
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:parvagarwal73@gmail.">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+        <p>I'm always open to discussing new projects, opportunities, and collaborations.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="/main.js"></script>
+</body>
+</html>
