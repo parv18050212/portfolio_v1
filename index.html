@@ -79,10 +79,9 @@
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2 id="projects-title">Featured Projects</h2>
-      <div class="projects-grid" id="projects-grid">
-        <!-- Featured Projects (always visible) -->
-        <div class="project-card featured-project" data-project="ai-analytics">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-project="ai-analytics">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="AI Project">
           </div>
@@ -99,7 +98,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card featured-project" data-project="cloud-migration">
+        <div class="project-card" data-project="cloud-migration">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Project">
           </div>
@@ -116,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="project-card featured-project" data-project="devops-pipeline">
+        <div class="project-card" data-project="devops-pipeline">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80" alt="DevOps Project">
           </div>
@@ -133,86 +132,14 @@
             </div>
           </div>
         </div>
-        <!-- Additional Projects (hidden by default) -->
-        <div class="project-card additional-project" data-project="security-analysis" style="display: none;">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Project">
-          </div>
-          <div class="project-content">
-            <h3>Security Analysis Tool</h3>
-            <p>Developed an automated security analysis tool for vulnerability detection</p>
-            <div class="tags">
-              <span>Python</span>
-              <span>Security</span>
-              <span>ML</span>
-            </div>
-            <div class="project-cta">
-              Click to learn more →
-            </div>
-          </div>
-        </div>
-        <div class="project-card additional-project" data-project="big-data" style="display: none;">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Project">
-          </div>
-          <div class="project-content">
-            <h3>Big Data Analytics Platform</h3>
-            <p>Built a scalable data analytics platform using Apache Spark</p>
-            <div class="tags">
-              <span>Spark</span>
-              <span>Hadoop</span>
-              <span>Python</span>
-            </div>
-            <div class="project-cta">
-              Click to learn more →
-            </div>
-          </div>
-        </div>
-        <div class="project-card additional-project" data-project="iot-monitoring" style="display: none;">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="IoT Project">
-          </div>
-          <div class="project-content">
-            <h3>IoT Monitoring System</h3>
-            <p>Created a real-time IoT monitoring system with cloud integration</p>
-            <div class="tags">
-              <span>IoT</span>
-              <span>AWS IoT</span>
-              <span>Node.js</span>
-            </div>
-            <div class="project-cta">
-              Click to learn more →
-            </div>
-          </div>
-        </div>
-        <div class="project-card additional-project" data-project="blockchain-supply" style="display: none;">
-          <div class="project-image">
-            <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?auto=format&fit=crop&w=800&q=80" alt="Blockchain Project">
-          </div>
-          <div class="project-content">
-            <h3>Blockchain Supply Chain</h3>
-            <p>Implemented a blockchain-based supply chain tracking system</p>
-            <div class="tags">
-              <span>Blockchain</span>
-              <span>Solidity</span>
-              <span>Web3</span>
-            </div>
-            <div class="project-cta">
-              Click to learn more →
-            </div>
-          </div>
-        </div>
       </div>
       
-      <!-- View More/Less Button -->
-      <div class="projects-toggle" style="text-align: center; margin-top: 3rem;">
-        <button id="view-more-btn" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-          View More Projects
+      <!-- View More Projects Button -->
+      <div class="projects-toggle">
+        <a href="projects.html" class="btn btn-primary">
           <i data-lucide="arrow-right"></i>
-        </button>
-        <button id="show-less-btn" class="btn btn-secondary" style="display: none;">
-          Show Less
-        </button>
+          View More Projects
+        </a>
       </div>
     </div>
   </section>

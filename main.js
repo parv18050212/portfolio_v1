@@ -125,44 +125,6 @@ navLinks.addEventListener('click', (e) => {
   }
 });
 
-// View More Projects functionality
-const viewMoreBtn = document.getElementById('view-more-btn');
-const showLessBtn = document.getElementById('show-less-btn');
-const additionalProjects = document.querySelectorAll('.additional-project');
-const projectsTitle = document.getElementById('projects-title');
-
-viewMoreBtn.addEventListener('click', () => {
-  // Show additional projects
-  additionalProjects.forEach(project => {
-    project.style.display = 'block';
-  });
-  
-  // Update title and buttons
-  projectsTitle.textContent = 'All Projects';
-  viewMoreBtn.style.display = 'none';
-  showLessBtn.style.display = 'inline-flex';
-  
-  // Re-initialize Lucide icons for new content
-  lucide.createIcons();
-});
-
-showLessBtn.addEventListener('click', () => {
-  // Hide additional projects
-  additionalProjects.forEach(project => {
-    project.style.display = 'none';
-  });
-  
-  // Update title and buttons
-  projectsTitle.textContent = 'Featured Projects';
-  viewMoreBtn.style.display = 'inline-flex';
-  showLessBtn.style.display = 'none';
-  
-  // Scroll back to projects section
-  document.getElementById('projects').scrollIntoView({
-    behavior: 'smooth'
-  });
-});
-
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
